@@ -37,3 +37,4 @@ min(table(sub_sample3$TUYEAR[sub_sample3$TRERNWA>0]))
 
 
 
+
