@@ -1,0 +1,27 @@
+TUCASEID      ->  Unique identifier for each respondent
+GTMETSTA      ->  Metropolitan Status
+PEEDUCA       ->  Highest level of school completed
+PEHSPNON      ->  Indicates Spanish, Hispanic or Latino
+PTDRACE       ->  Race of respondent
+TEAGE         ->  Age of respondent
+TELFS         ->  Labour force status
+TEMJOT        ->  more than one job in the last seven days?
+TSCHNER       ->  Enrolled in High School, College or Uni?
+TESCHLVL      ->  If enrolled: High School, College or Uni?
+TESEX         ->  Gender of respondent
+TESPEMPNOT    ->  Employment status of spouse/partner
+TRCHILDNUM    ->  Number of household children
+TRDPFTPT      ->  Full time or part time employment status
+TRERNWA       ->  Weekly earnings
+TRHOLIDAY     ->  Indicates whether diary day was a holiday
+TRSPFTPT      ->  Full time or part time employment of spouse/partner
+TRSPPRES      ->  presence of the respondents partner in the household
+TRYHHCHILD    ->  Age of youngest household child <18 
+TUDIARYDAY    ->  day of the week of diary day
+TUFNWGTP      ->  ATUS weights
+TEHRUSLT      ->  Total hours usually worked per week
+TUYEAR        ->  Year of diary day
+
+
+
+
