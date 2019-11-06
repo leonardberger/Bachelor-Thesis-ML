@@ -1,0 +1,39 @@
+
+## plausability-check whether the amounts of time all add-up to 24h
+## due to computanional reasons only a random subset
+s <- numeric(2000)
+x <- sort(sample(1:201151,2000,replace = FALSE))
+for (i in 1:2000){
+  s[i] <- sum(atussum_0318[x[i],-(1:24)])/60
+}
+
+mean(s)
+var(s)
+## mean=24 and variance=0 means every object in the vector=24
+
+
+## sample from age 18 to 64
+right_age <- (atussum_0318$TEAGE>17)&(atussum_0318$TEAGE<65)
+sub_sample1 <- atussum_0318[right_age,]
+
+
+## sample full-time-employed
+right_employment <- (sub_sample1$TELFS==1)|(sub_sample1$TELFS==2)
+sub_sample2 <- sub_sample1[right_employment,]
+
+
+## eliminating individuals interviewed on weekends, holidays and days they were absent from work
+right_day <- (sub_sample2$TRHOLIDAY==0)&(sub_sample2$TUDIARYDAY!=7&sub_sample2$TUDIARYDAY!=1)&(sub_sample2$TELFS!=2)
+sub_sample3 <- sub_sample2[right_day,]
+
+
+
+table(sub_sample3$TUYEAR[sub_sample3$TRERNWA>0])
+which.min(table(sub_sample3$TUYEAR[sub_sample3$TRERNWA>0]))
+min(table(sub_sample3$TUYEAR[sub_sample3$TRERNWA>0]))
+## in the 3rd subsample we have only people who worked the day of the diary, leaving subsamples for each year with minimum 2221 observations to evaluate for income
+
+
+
+
+
